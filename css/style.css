@@ -1,0 +1,107 @@
+/*---Color Var-*/
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px; }
+
+/*Body*/
+body {
+  font-family: "Open Sans",'Arial';
+  font-size: 16px; }
+
+.group-check-box {
+  padding: 40px; }
+  .group-check-box .label-name {
+    display: inline-block;
+    margin-left: 10px; }
+  .group-check-box .item {
+    margin-bottom: 20px; }
+
+/*Toggle check*/
+.toggle-check {
+  position: relative; }
+  .toggle-check .check {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    opacity: 0; }
+  .toggle-check .toggle-name {
+    position: relative;
+    width: 24px;
+    height: 16px;
+    border-radius: 20px;
+    background: #E9EBF0;
+    display: inline-block; }
+    .toggle-check .toggle-name:before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      border-radius: 50%;
+      top: 0px;
+      bottom: 0px;
+      margin: auto;
+      left: 2px;
+      background: #fff; }
+  .toggle-check .check:checked + .toggle-name {
+    background: #219653; }
+    .toggle-check .check:checked + .toggle-name:before {
+      left: auto;
+      right: 2px; }
+  .toggle-check .check:disabled + .toggle-name {
+    background: #BDBDBD; }
+  .toggle-check .check:disabled:checked + .toggle-name {
+    background: #828282; }
+
+/*Custom checkbox, radio*/
+.check-action {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle; }
+  .check-action .check {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 0; }
+  .check-action .check-name {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #C3C8D2;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 16px; }
+    .check-action .check-name:before {
+      content: "";
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 10px; }
+  .check-action .check[type='radio'] + .check-name {
+    border-radius: 50%; }
+  .check-action .check:checked + .check-name:before {
+    content: "\2713"; }
+  .check-action .check:disabled, .check-action .check:disabled + .check-name {
+    cursor: not-allowed; }
+  .check-action .check:disabled + .check-name {
+    background: #E9EBF0; }
+  .check-action .check:disabled:checked + .check-name {
+    background: #828282;
+    border-color: #828282; }
+  .check-action .check[type='checkbox']:checked + .check-name {
+    background: #219653;
+    border-color: #219653;
+    color: #fff; }
+  .check-action .check[type='radio']:checked + .check-name {
+    color: #219653;
+    border-color: #219653; }
+    .check-action .check[type='radio']:checked + .check-name:before {
+      content: '\25CF'; }
+  .check-action .check[type='radio']:checked:disabled + .check-name {
+    border-color: #828282;
+    color: #828282;
+    background-color: transparent; }
